@@ -64,7 +64,7 @@ function Rating(opts) {
 
 Emitter(Rating.prototype);
 
-Rating.prototype.rate = function Rating(rating) {
+Rating.prototype.rate = function Rating_rate(rating) {
   this.rating = rating;
   this.current = range(1, rating);
   this.set(this.current);
@@ -95,7 +95,7 @@ Rating.prototype.attach = function Rating_attach(el) {
   el.appendChild(this.el);
 };
 
-Rating.prototype.enable = function Rating_disable() {
+Rating.prototype.enable = function Rating_enable() {
   this.disabled = false;
   classes(this.el).remove('disabled');
 };

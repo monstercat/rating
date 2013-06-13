@@ -1,4 +1,8 @@
 
+# 0.1.2
+
+* bugs
+
 # 0.1.1
 
 * event bug fixes
