@@ -30,23 +30,27 @@ function Rating(opts) {
   var timeout = null;
 
   var over = function(star, i){
+    if (timeout !== null) {
+      clearTimeout(timeout);
+      timeout = null;
+    } else {
+      self.emit('mouseenter', star, i);
+    }
+
     if (!this.disabled) {
-      if (timeout !== null) { 
-        clearTimeout(timeout);
-        timeout = null;
-      }
       this.highlight(range(1, i), true);
       this.highlight(range(i+1, this.stars), false);
     }
   };
 
   var out = function(star, i) {
-    if (!this.disabled) {
-      timeout = setTimeout(function(){
+    timeout = setTimeout(function(){
+      self.emit('mouseleave', star, i);
+      if (!this.disabled) {
         self.highlight(range(1, self.stars), false);
         self.highlight(self.current, true);
-      }, this.delay);
-    }
+      }
+    }, this.delay);
   };
 
   var click = function(star, i) {
@@ -85,9 +89,9 @@ Rating.prototype.highlight = function Rating_highlight(ns, highlight) {
   each(ns, function(n){
     var el = self.els[n-1];
     var c = classes(el);
-    if (highlight) 
+    if (highlight)
       c.add('highlight');
-    else 
+    else
       c.remove('highlight');
   });
 };
