@@ -26,8 +26,9 @@
 
           rate.attach(example);
           rate.set([1,2,3,4]);
-          rate.disable();
-          rate.enable();
+          rate.on('rating', function(rating){
+            console.log(rating);
+          });
         </script>
     </body>
 </html>

@@ -4,7 +4,7 @@ var hover = require('hover');
 var each = require('each');
 var events = require('event');
 var bind = require('bind');
-var emitter = require('emitter');
+var Emitter = require('emitter');
 var classes = require('classes');
 var exclrange = require('range');
 var range = function(a, b){ return exclrange(a, b, true); };
@@ -13,6 +13,7 @@ module.exports = Stars;
 
 function Stars(opts) {
   if (!(this instanceof Stars)) return new Stars(opts);
+  Emitter.call(this);
   var self = this;
   opts = opts || {};
 
@@ -60,10 +61,13 @@ function Stars(opts) {
   });
 }
 
+Emitter(Stars.prototype);
+
 Stars.prototype.rate = function Stars_rate(rating) {
   this.rating = rating;
   this.current = range(1, rating);
   this.set(this.current);
+  this.emit('rating', rating)
 };
 
 Stars.prototype.set = function Stars_set(setting) {
