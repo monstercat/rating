@@ -1,7 +1,7 @@
 
 # rating
 
-  Rating component [demo](http://monstercat.github.com/rating)
+  Rating component with SVG stars [demo](http://monstercat.github.com/rating)
 
   ![Rating preview](preview.png)
 
