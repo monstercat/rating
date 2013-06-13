@@ -28,12 +28,16 @@ function Rating(opts) {
   this.disabled = false;
 
   var timeout = null;
+  var reset = true;
 
   var over = function(star, i){
     if (timeout !== null) {
       clearTimeout(timeout);
       timeout = null;
-    } else {
+    }
+
+    if (reset) {
+      reset = false;
       self.emit('mouseenter', star, i);
     }
 
@@ -45,6 +49,7 @@ function Rating(opts) {
 
   var out = function(star, i) {
     timeout = setTimeout(function(){
+      reset = true;
       self.emit('mouseleave', star, i);
       if (!this.disabled) {
         self.highlight(range(1, self.stars), false);
