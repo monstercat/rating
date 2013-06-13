@@ -49,6 +49,7 @@ function Rating(opts) {
   };
 
   var click = function(star, i) {
+    this.trigger("click", star, i, self.disabled);
     if (!self.disabled)
       self.rate(i+1);
     classes(star).toggle('clicked');
