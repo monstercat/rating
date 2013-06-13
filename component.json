@@ -19,7 +19,7 @@
     "component/each": "*"
   },
   "license": "MIT",
-  "demo": "example.html",
+  "demo": "http://monstercat.github.com/rating",
   "main": "index.js",
   "scripts": [
     "index.js",
