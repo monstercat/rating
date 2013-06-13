@@ -13,11 +13,10 @@
     "component/classes": "*",
     "component/event": "*",
     "component/bind": "*",
+    "component/each": "*",
     "component/domify": "*"
   },
-  "development": {
-    "component/each": "*"
-  },
+  "development": {},
   "license": "MIT",
   "demo": "http://monstercat.github.com/rating",
   "main": "index.js",
