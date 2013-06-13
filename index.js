@@ -19,7 +19,7 @@ function Stars(opts) {
 
   var data = {};
   data.stars = opts.stars != null? opts.stars : 5;
-  var el = this.el = domify(require('./template')(data))[0];
+  var el = this.el = domify(require('./template')(data));
 
   this.stars = data.stars;
   this.els = [].slice.call(el.children);

@@ -14,7 +14,7 @@
     "component/event": "*",
     "component/bind": "*",
     "component/each": "*",
-    "component/domify": "*"
+    "component/domify": "1.0.0"
   },
   "development": {},
   "license": "MIT",
