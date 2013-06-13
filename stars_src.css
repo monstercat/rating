@@ -1,0 +1,26 @@
+
+.star {
+  margin-left: 2px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: inline(images/star_gray.svg);
+}
+
+.stars {
+  display: inline;
+  cursor: pointer;
+}
+
+.stars.disabled {
+  cursor: auto;
+}
+
+.star.highlight {
+  background: inline(images/star.svg);
+}
+
+.star:first-child {
+  margin-left: 0px;
+}
+

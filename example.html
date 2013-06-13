@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="build/build.css" type="text/css" />
+        <script src="build/build.js" type="text/javascript" charset="utf-8"></script>
+        <title>Rating demo</title>
+        <style type="text/css" media="all">
+          .star {
+            width: 16px;
+            height: 16px;
+          }
+        </style>
+    </head>
+    <body>
+        <h1>Rating demo</h1>
+        <div class="example">
+        </div>
+
+        <script type="text/javascript" charset="utf-8">
+          var domify = require('component-domify');
+          var each = require('component-each');
+          var example = document.querySelector('.example');
+          var rating = require('rating');
+          var rate = rating({ stars: 10 });
+
+          rate.attach(example);
+          rate.set([1,2,3,4]);
+          rate.disable();
+          rate.enable();
+        </script>
+    </body>
+</html>

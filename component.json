@@ -1,0 +1,31 @@
+
+{
+  "name": "rating",
+  "repo": "monstercat/rating",
+  "description": "Rating stars",
+  "version": "0.0.1",
+  "keywords": ["rating", "stars"],
+  "dependencies": {
+    "monstercat/jade-runtime": "*",
+    "stagas/hover": "*",
+    "component/range": "*",
+    "component/emitter": "*",
+    "component/classes": "*",
+    "component/event": "*",
+    "component/bind": "*",
+    "component/domify": "*"
+  },
+  "development": {
+    "component/each": "*"
+  },
+  "license": "MIT",
+  "demo": "example.html",
+  "main": "index.js",
+  "scripts": [
+    "index.js",
+    "template.js"
+  ],
+  "styles": [
+    "stars.css"
+  ]
+}

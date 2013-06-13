@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+]>
+<svg  version="1.1" xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 viewBox="-0.7 -0.2 129 129" enable-background="new -0.7 -0.2 129 124" xml:space="preserve">
+<defs>
+</defs>
+<polygon opacity="0.57" stroke="#000000" points="65.1,6.5 84,44.8 126.3,50.9 95.7,80.7 102.9,122.8 65.1,103 27.3,122.8 
+	34.5,80.7 3.9,50.9 46.2,44.8 "/>
+<polygon fill="#FFD431" stroke="#BF0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="62.7,1.5 
+	81.6,39.8 123.9,45.9 93.3,75.8 100.5,117.9 62.7,98 24.9,117.9 32.1,75.8 1.5,45.9 43.8,39.8 "/>
+<g>
+	<linearGradient id="XMLID_1_" gradientUnits="userSpaceOnUse" x1="62.6768" y1="14.0576" x2="62.6768" y2="105.8979">
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="1" style="stop-color:#FFDB00"/>
+	</linearGradient>
+	<path fill="url(#XMLID_1_)" d="M47.8,44.3c0,0-24.9,3.6-33.4,4.8c6.2,6,24.1,23.5,24.1,23.5s-4.2,24.8-5.7,33.2
+		c7.6-4,29.8-15.7,29.8-15.7s22.2,11.7,29.8,15.7c-1.5-8.5-5.7-33.2-5.7-33.2s18-17.5,24.1-23.5c-8.5-1.2-33.4-4.8-33.4-4.8
+		S66.5,21.8,62.7,14.1C58.9,21.8,47.8,44.3,47.8,44.3z"/>
+</g>
+</svg>
