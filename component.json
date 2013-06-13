@@ -3,7 +3,7 @@
   "name": "rating",
   "repo": "monstercat/rating",
   "description": "Rating stars",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": ["rating", "stars"],
   "dependencies": {
     "monstercat/jade-runtime": "*",
