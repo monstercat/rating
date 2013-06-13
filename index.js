@@ -34,8 +34,8 @@ function Rating(opts) {
         clearTimeout(timeout);
         timeout = null;
       }
-      this.highlight(range(1, i+1), true);
-      this.highlight(range(i+2, this.stars), false);
+      this.highlight(range(1, i), true);
+      this.highlight(range(i+1, this.stars), false);
     }
   };
 
@@ -51,12 +51,12 @@ function Rating(opts) {
   var click = function(star, i) {
     this.emit("click", star, i, self.disabled);
     if (!self.disabled)
-      self.rate(i+1);
+      self.rate(i);
     classes(star).toggle('clicked');
   }
 
   each(el.children, function(star, i){
-    var bnd = function(fn) { return bind(self, fn, star, i); };
+    var bnd = function(fn) { return bind(self, fn, star, i+1); };
     hover(star, bnd(over), bnd(out));
     events.bind(star, 'click', bnd(click));
   });
