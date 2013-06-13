@@ -3,7 +3,7 @@
 
   Rating component with SVG stars [demo](http://monstercat.github.com/rating)
 
-  ![Rating preview](preview.png)
+  <img src="https://raw.github.com/monstercat/rating/master/preview.png" width="95px" height="34px"/>
 
 ## Installation
 
