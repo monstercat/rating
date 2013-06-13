@@ -17,6 +17,13 @@ var rate = rating({ stars: 10 });
 var container = document.querySelector('.example');
 
 rate.attach(container);
+rate.disable();
+rate.enable();
+rate.rate(5);
+rate.set([1,3,4,6]);
+rate.on('rating', function(rating){
+  console.log(rating);
+});
 ```
 
 ## Adjust star size
