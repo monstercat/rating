@@ -25,6 +25,7 @@ function Rating(opts) {
   this.els = [].slice.call(el.children);
   this.delay = opts.delay != null? opts.delay : 100;
   this.current = [];
+  this.disabled = false;
 
   var timeout = null;
 
