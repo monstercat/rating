@@ -9,10 +9,10 @@ var classes = require('classes');
 var exclrange = require('range');
 var range = function(a, b){ return exclrange(a, b, true); };
 
-module.exports = Stars;
+module.exports = Rating;
 
-function Stars(opts) {
-  if (!(this instanceof Stars)) return new Stars(opts);
+function Rating(opts) {
+  if (!(this instanceof Rating)) return new Rating(opts);
   Emitter.call(this);
   var self = this;
   opts = opts || {};
@@ -61,22 +61,22 @@ function Stars(opts) {
   });
 }
 
-Emitter(Stars.prototype);
+Emitter(Rating.prototype);
 
-Stars.prototype.rate = function Stars_rate(rating) {
+Rating.prototype.rate = function Rating(rating) {
   this.rating = rating;
   this.current = range(1, rating);
   this.set(this.current);
   this.emit('rating', rating)
 };
 
-Stars.prototype.set = function Stars_set(setting) {
+Rating.prototype.set = function Rating_set(setting) {
   this.current = setting;
   this.highlight(range(1, this.stars), false);
   this.highlight(this.current, true);
 }
 
-Stars.prototype.highlight = function Stars_highlight(ns, highlight) {
+Rating.prototype.highlight = function Rating_highlight(ns, highlight) {
   highlight = highlight == null? true : highlight;
 
   var self = this;
@@ -90,16 +90,16 @@ Stars.prototype.highlight = function Stars_highlight(ns, highlight) {
   });
 };
 
-Stars.prototype.attach = function Stars_attach(el) {
+Rating.prototype.attach = function Rating_attach(el) {
   el.appendChild(this.el);
 };
 
-Stars.prototype.enable = function Stars_disable() {
+Rating.prototype.enable = function Rating_disable() {
   this.disabled = false;
   classes(this.el).remove('disabled');
 };
 
-Stars.prototype.disable = function Stars_disable() {
+Rating.prototype.disable = function Rating_disable() {
   this.disabled = true;
   classes(this.el).add('disabled');
 };
